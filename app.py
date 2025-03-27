@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Этот маршрут будет принимать данные с твоей формы
 @app.route("/api/form", methods=["POST"])
